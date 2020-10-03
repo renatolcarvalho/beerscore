@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="BeerScoreApp.Views.BeerScoreList">
+	<ContentPage.ToolbarItems>
+		<ToolbarItem Text="Adicionar cerveja" Clicked="OnItemAdded">
+		</ToolbarItem>
+	</ContentPage.ToolbarItems>
+	<StackLayout>
+		<Label Text="Beer Score App" FontSize="Title" Margin="20 0 0 20 "/>
+		<ListView x:Name="listView" Margin="20" ItemSelected="OnListItemSelected">
+			<ListView.ItemTemplate>
+				<DataTemplate>
+					<ViewCell>
+						<StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+							<Label Text="{Binding Name}" VerticalTextAlignment="Center" HorizontalOptions="StartAndExpand" />
+							<Label Text="Nota:" VerticalTextAlignment="Center" HorizontalOptions="End" />
+							<Label Text="{Binding Score}" VerticalTextAlignment="Center" HorizontalOptions="End" />
+						</StackLayout>
+					</ViewCell>
+				</DataTemplate>
+			</ListView.ItemTemplate>
+		</ListView>
+	</StackLayout>
+</ContentPage>
+
