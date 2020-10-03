@@ -4,9 +4,9 @@
 		<ToolbarItem Text="Adicionar cerveja" Clicked="OnItemAdded">
 		</ToolbarItem>
 	</ContentPage.ToolbarItems>
-	<StackLayout>
-		<Label Text="Beer Score App" FontSize="Title" Margin="20 0 0 20 "/>
-		<ListView x:Name="listView" Margin="20" ItemSelected="OnListItemSelected">
+	<StackLayout Margin="20" VerticalOptions="StartAndExpand">
+		<Label Text="Beer Score App" FontSize="Title"/>
+		<ListView x:Name="listView" ItemSelected="OnListItemSelected">
 			<ListView.ItemTemplate>
 				<DataTemplate>
 					<ViewCell>
